@@ -37,6 +37,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/khade/.m2/repository/org/postgresql/postgresql/42.7.5/postgresql-42.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dell/.m2/repository/org/postgresql/postgresql/42.7.5/postgresql-42.7.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

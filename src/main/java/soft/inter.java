@@ -28,9 +28,7 @@ public class inter extends JFrame {
 	private JTextField pass1;
 	private final Action action = new SwingAction();
 
-	String url = "jdbc:postgresql://localhost:5432/postgres";
-    String user = "postgres";
-    String password = "123456";
+	
 
 	/**
 	 * Launch the application.
@@ -99,49 +97,6 @@ public class inter extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e) {
 			
-			String name = name1.getText(); 
-			String passw = pass1.getText();
-			
-			try {
-			
-	        Class.forName("org.postgresql.Driver");
-
-	        Connection con;
-			con = DriverManager.getConnection(url, user, password);
-			  con.setAutoCommit(false);
-			  System.out.println("Connected successfully!");
-			
-			  String qry1 = "SELECT * FROM soft2.administrator WHERE name =? AND pass = ? ";
-		        PreparedStatement pstmt1 = con.prepareStatement(qry1);
-		        
-		        pstmt1.setString(1,name);
-		        pstmt1.setString(2,passw);
-		
-		
-		        ResultSet rs = pstmt1.executeQuery();
-
-		        con.commit(); 
-
-		        if 
-		        (rs.next()) {
-		            System.out.println("subose to go to admin bage ");
-		        }/* else {
-		        
-		        try {
-		        
-		        
-		        logic for loking for him in the user entitis in data base 
-		        }cach{
-		        }
-		         * */
-
-		    } catch (SQLException e1) {
-		        e1.printStackTrace();
-		    } catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-	    
 		}
 	}
 }
